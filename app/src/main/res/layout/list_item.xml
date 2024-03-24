@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/promptInputBackground"
+        android:name="@string/promptInputBackgroundName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/editTextText3"
+        app:srcCompat="@drawable/grey_text_border"
+        android:contentDescription="@string/promptInputBackgroundContDesc" />
+
+    <TextView
+        android:id="@+id/promptTypeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/promptInput1"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promptTypeName"
+        android:layout_alignStart="@id/promptInputBackground"
+        android:layout_alignEnd="@id/promptInputBackground"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:autofillHints="true"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="@string/promptHint"
+        android:textSize="20sp" />
+
+</RelativeLayout>
