@@ -6,7 +6,12 @@
     <string name="prompt_input_hint">Write prompt here…</string>
     <string name="promptInputBackgroundName">promptInputBackground</string>
     <string name="promptInputBackgroundContDesc">Grey background prompt area</string>
-    <string name="formalCheckName">Formal</string>
+    <string name="teacherCheckName">Teacher</string>
     <string name="businessCheckName">Business</string>
     <string name="friendlyCheckName">Friendly</string>
+    <string name="bossCheckName">Boss</string>
+    <string name="coworkerCheckName">Co-worker</string>
+    <string name="customCheckname">Custom</string>
+    <string name="customCheckHint">Write tone here (eg. Respectful and kind)…</string>
+    <string name="toneInputBackgroundName">Set Email Tone</string>
 </resources>

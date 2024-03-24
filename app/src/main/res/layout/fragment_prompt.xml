@@ -1,112 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/promptLayout"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical"
     tools:context=".PromptFragment">
 
-    <ImageView
-        android:id="@+id/inputBackground"
+    <RelativeLayout
+        android:id="@+id/promptLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/promptTitle"
-        android:layout_alignBottom="@id/promptInput"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:src="@drawable/grey_text_border"
-        android:contentDescription="@string/promptInputBackgroundContDesc" />
+        android:scrollbars="vertical"
+        tools:context=".PromptFragment">
 
-    <TextView
-        android:id="@+id/promptTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/inputBackground"
-        android:layout_alignEnd="@id/inputBackground"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/merriweather_light"
-        android:gravity="center_horizontal"
-        android:text="@string/promptInput1"
-        android:textColor="#000000"
-        android:textSize="30sp" />
+        <ImageView
+            android:id="@+id/inputBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/promptTitle"
+            android:layout_alignBottom="@id/promptInput"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/promptInputBackgroundContDesc"
+            android:src="@drawable/grey_text_border" />
 
-    <EditText
-        android:id="@+id/promptInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/promptTitle"
-        android:layout_alignStart="@id/inputBackground"
-        android:layout_alignEnd="@id/inputBackground"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:ems="10"
-        android:hint="@string/promptHint"
-        android:inputType="textMultiLine"
-        android:textColor="#232222"
-        android:textColorHint="#706464"
-        android:textSize="20sp"
-        android:autofillHints="false" />
+        <TextView
+            android:id="@+id/promptTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/inputBackground"
+            android:layout_alignEnd="@id/inputBackground"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:text="@string/promptInput1"
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/inputBackground"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:src="@drawable/grey_text_border" />
+        <EditText
+            android:id="@+id/promptInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promptTitle"
+            android:layout_alignStart="@id/inputBackground"
+            android:layout_alignEnd="@id/inputBackground"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:autofillHints="false"
+            android:ems="10"
+            android:hint="@string/promptHint"
+            android:inputType="textMultiLine"
+            android:textColor="#232222"
+            android:textColorHint="#706464"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/imageView2"
-        android:layout_alignTop="@id/imageView2"
-        android:layout_alignEnd="@id/imageView2"
-        android:fontFamily="@font/merriweather_light"
-        android:gravity="center_horizontal"
-        android:text="TextView"
-        android:textColor="#000000"
-        android:textSize="30dp" />
+        <ImageView
+            android:id="@+id/toneInputBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputBackground"
+            android:layout_alignStart="@id/textView2"
+            android:layout_alignTop="@id/textView2"
+            android:layout_alignEnd="@id/textView2"
+            android:layout_alignBottom="@id/customCheckInput"
+            android:layout_centerHorizontal="false"
+            android:src="@drawable/grey_text_border" />
 
-    <CheckBox
-        android:id="@+id/formalCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView2"
-        android:layout_alignStart="@id/imageView2"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="@string/formalCheckName"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputBackground"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:text="@string/toneInputBackgroundName"
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
-    <CheckBox
-        android:id="@+id/businessCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/formalCheck"
-        android:layout_alignStart="@id/imageView2"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="@string/businessCheckName"
-        android:textSize="18sp" />
+        <CheckBox
+            android:id="@+id/businessCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:layout_alignStart="@id/textView2"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/businessCheckName"
+            android:textSize="18sp" />
 
-    <CheckBox
-        android:id="@+id/friendlyCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/businessCheck"
-        android:layout_alignStart="@id/imageView2"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="@string/friendlyCheckName"
-        android:textSize="18sp" />
+        <CheckBox
+            android:id="@+id/friendlyCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/businessCheck"
+            android:layout_alignStart="@id/businessCheck"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/friendlyCheckName"
+            android:textSize="18sp" />
 
-</RelativeLayout>
+        <CheckBox
+            android:id="@+id/teacherCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/friendlyCheck"
+            android:layout_alignStart="@id/friendlyCheck"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/teacherCheckName"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/bossCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacherCheck"
+            android:layout_alignStart="@id/teacherCheck"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/bossCheckName"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/coworkerCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bossCheck"
+            android:layout_alignStart="@id/bossCheck"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/coworkerCheckName"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/customCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkerCheck"
+            android:layout_alignStart="@id/coworkerCheck"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/customCheckname"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/customCheckInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkerCheck"
+            android:layout_alignEnd="@id/textView2"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/customCheck"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/customCheckHint"
+            android:inputType="textMultiLine"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
