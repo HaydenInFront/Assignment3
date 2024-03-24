@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Assignment 3</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="promptHint">Write prompt here…</string>
+    <string name="promptInput1">Give email summary</string>
+    <string name="promptInput2">Tweak email</string>
+    <string name="prompt_input_hint">Write prompt here…</string>
+    <string name="promptInputBackgroundName">promptInputBackground</string>
+    <string name="promptInputBackgroundContDesc">Grey background prompt area</string>
+    <string name="formalCheckName">Formal</string>
+    <string name="businessCheckName">Business</string>
+    <string name="friendlyCheckName">Friendly</string>
 </resources>

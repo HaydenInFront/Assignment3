@@ -1,33 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/promptLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
-    tools:context=".MainActivity">
+    tools:context=".PromptFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/summaryHolder"
+    <ImageView
+        android:id="@+id/inputBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="207dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_alignTop="@id/promptTitle"
+        android:layout_alignBottom="@id/promptInput"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/grey_text_border"
+        android:contentDescription="@string/promptInputBackgroundContDesc" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/summaryLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/promptTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/inputBackground"
+        android:layout_alignEnd="@id/inputBackground"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/merriweather_light"
+        android:gravity="center_horizontal"
+        android:text="@string/promptInput1"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailSummary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Type summary here..." />
-        </com.google.android.material.textfield.TextInputLayout>
-    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/promptInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promptTitle"
+        android:layout_alignStart="@id/inputBackground"
+        android:layout_alignEnd="@id/inputBackground"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:hint="@string/promptHint"
+        android:inputType="textMultiLine"
+        android:textColor="#232222"
+        android:textColorHint="#706464"
+        android:textSize="20sp"
+        android:autofillHints="false" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/inputBackground"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/grey_text_border" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/imageView2"
+        android:layout_alignTop="@id/imageView2"
+        android:layout_alignEnd="@id/imageView2"
+        android:fontFamily="@font/merriweather_light"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <CheckBox
+        android:id="@+id/formalCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_alignStart="@id/imageView2"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/merriweather_light"
+        android:text="@string/formalCheckName"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/businessCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formalCheck"
+        android:layout_alignStart="@id/imageView2"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/merriweather_light"
+        android:text="@string/businessCheckName"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/friendlyCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/businessCheck"
+        android:layout_alignStart="@id/imageView2"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/merriweather_light"
+        android:text="@string/friendlyCheckName"
+        android:textSize="18sp" />
+
+</RelativeLayout>
