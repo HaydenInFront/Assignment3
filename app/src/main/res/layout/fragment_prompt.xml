@@ -14,6 +14,7 @@
         android:id="@+id/promptLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#414141"
         android:scrollbars="vertical"
         tools:context=".PromptFragment">
 
@@ -27,8 +28,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:contentDescription="@string/promptInputBackgroundContDesc"
-            android:src="@drawable/grey_text_border" />
+            android:src="@drawable/background_text_border" />
 
         <TextView
             android:id="@+id/promptTitle"
@@ -66,15 +66,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/inputBackground"
-            android:layout_alignStart="@id/textView2"
-            android:layout_alignTop="@id/textView2"
-            android:layout_alignEnd="@id/textView2"
+            android:layout_alignStart="@id/toneTitle"
+            android:layout_alignTop="@id/toneTitle"
+            android:layout_alignEnd="@id/toneTitle"
             android:layout_alignBottom="@id/customCheckInput"
             android:layout_centerHorizontal="false"
-            android:src="@drawable/grey_text_border" />
+            android:contentDescription="@string/backgroundContDesc"
+            android:src="@drawable/background_text_border" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/toneTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/inputBackground"
@@ -91,8 +92,8 @@
             android:id="@+id/businessCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView2"
-            android:layout_alignStart="@id/textView2"
+            android:layout_below="@id/toneTitle"
+            android:layout_alignStart="@id/toneTitle"
             android:layout_marginStart="10dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/businessCheckName"
@@ -153,15 +154,65 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/coworkerCheck"
-            android:layout_alignEnd="@id/textView2"
+            android:layout_alignEnd="@id/toneTitle"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="10dp"
             android:layout_toEndOf="@id/customCheck"
+            android:autofillHints="false"
             android:ems="10"
             android:fontFamily="sans-serif-light"
             android:hint="@string/customCheckHint"
             android:inputType="textMultiLine"
+            android:textColorHint="#706464"
             android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/addressInputBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/addressTitle"
+            android:layout_alignTop="@id/addressTitle"
+            android:layout_alignEnd="@id/addressTitle"
+            android:layout_alignBottom="@id/addressInput"
+            android:contentDescription="@string/backgroundContDesc"
+            android:src="@drawable/background_text_border" />
+
+        <TextView
+            android:id="@+id/addressTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toneInputBackground"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:text="@string/addressTitleName"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/addressInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressTitle"
+            android:layout_alignStart="@id/addressTitle"
+            android:layout_alignEnd="@id/addressTitle"
+            android:autofillHints="false"
+            android:ems="10"
+            android:hint="@string/addressInputHint"
+            android:inputType="text"
+            android:textColorHint="#706464"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/proceedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressInputBackground"
+            android:layout_alignEnd="@id/addressInputBackground"
+            android:background="@drawable/background_text_border"
+            android:text="Button" />
 
     </RelativeLayout>
 

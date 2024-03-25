@@ -5,7 +5,7 @@
     <string name="promptInput2">Tweak email</string>
     <string name="prompt_input_hint">Write prompt here…</string>
     <string name="promptInputBackgroundName">promptInputBackground</string>
-    <string name="promptInputBackgroundContDesc">Grey background prompt area</string>
+    <string name="backgroundContDesc">Tan brown background content wrap</string>
     <string name="teacherCheckName">Teacher</string>
     <string name="businessCheckName">Business</string>
     <string name="friendlyCheckName">Friendly</string>
@@ -14,4 +14,7 @@
     <string name="customCheckname">Custom</string>
     <string name="customCheckHint">Write tone here (eg. Respectful and kind)…</string>
     <string name="toneInputBackgroundName">Set Email Tone</string>
+    <string name="addressTitleName">Who is this addressed to?</string>
+    <string name="addressInputHint">Write name (e.g Mrs. Doe, Jane Smith)</string>
+    <string name="submitEmailPromptButton">Submit</string>
 </resources>
