@@ -3,10 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/promptFragment">
+    app:startDestination="@id/menuFragment">
     <fragment
         android:id="@+id/promptFragment"
         android:name="com.example.assignment3.PromptFragment"
         android:label="fragment_prompt"
         tools:layout="@layout/fragment_prompt" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.assignment3.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_promptFragment"
+            app:destination="@id/promptFragment" />
+    </fragment>
 </navigation>
