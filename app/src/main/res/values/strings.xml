@@ -17,4 +17,6 @@
     <string name="addressTitleName">Who is this addressed to?</string>
     <string name="addressInputHint">Write name (e.g Mrs. Doe, Jane Smith)</string>
     <string name="submitEmailPromptButton">Submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

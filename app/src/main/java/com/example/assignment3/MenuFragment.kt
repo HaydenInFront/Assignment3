@@ -5,13 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.Button
+import androidx.navigation.findNavController
+
+//import androidx.recyclerview.widget.RecyclerView
 
 class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val menuButton = view.findViewById<Button>(R.id.menuStart)
+
+        menuButton.setOnClickListener {
+            view.findNavController()
+                .navigate(R.id.action_menuFragment_to_promptFragment)
+        }
         /*val myDataset = Datasource().loadPromptInputs()
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.promptRecycler)

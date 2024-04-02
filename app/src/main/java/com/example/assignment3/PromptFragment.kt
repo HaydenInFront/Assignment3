@@ -11,6 +11,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.findFragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 class PromptFragment : Fragment() {
@@ -25,7 +26,10 @@ class PromptFragment : Fragment() {
         val customInput = view.findViewById<EditText>(R.id.customCheckInput)
 
         val checkList: ArrayList<CheckBoxBundle> = ArrayList()
-        checkList += CheckBoxBundle(view.findViewById<CheckBox>(R.id.businessCheck), "business")
+        checkList+= com.example.assignment3.CheckBoxBundle(
+            view.findViewById<CheckBox>(R.id.businessCheck),
+            "business"
+        )
         checkList+= CheckBoxBundle(view.findViewById<CheckBox>(R.id.friendlyCheck), "friendly")
         checkList+= CheckBoxBundle(view.findViewById<CheckBox>(R.id.teacherCheck),"student to teacher")
         checkList+= CheckBoxBundle(view.findViewById<CheckBox>(R.id.bossCheck),"employee to boss")
@@ -52,12 +56,16 @@ class PromptFragment : Fragment() {
             } else {
                 val prompt = promptInput.text.toString()
                 val address = addressInput.text.toString()
-                val tone: String
-                if (checkedList[0].tone == "custom"){
-                    tone = customInput.text.toString()
+                val tone = if (checkedList[0].tone == "custom"){
+                    customInput.text.toString()
+                } else {
+                    checkList[0].tone
                 }
 
-                
+                val responseInput = arrayOf(prompt, tone, address)
+
+                val action = PromptFragmentDirections.actionPromptFragmentToDraftFragment(responseInput)
+                view.findNavController().navigate(action)
             }
         }
 
