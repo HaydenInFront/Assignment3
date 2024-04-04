@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/draftBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/draftTitle"
+            android:layout_alignBottom="@id/copyButton"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="-5dp"
+            app:srcCompat="@drawable/background_text_border" />
+
+        <ImageView
+            android:id="@+id/draftTextBubble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draftTitle"
+            android:layout_alignBottom="@id/draftText"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_draft_text_border" />
+
+        <TextView
+            android:id="@+id/draftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draftTitle"
+            android:layout_alignStart="@id/draftTextBubble"
+            android:layout_alignEnd="@id/draftTextBubble"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/copyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draftTextBubble"
+            android:layout_alignStart="@id/draftBackground"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#4379FF"
+            android:text="Copy" />
+
+        <TextView
+            android:id="@+id/draftTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
