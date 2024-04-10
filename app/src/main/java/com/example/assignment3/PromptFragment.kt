@@ -50,6 +50,9 @@ class PromptFragment : Fragment() {
                         }
                         true
                     }
+                    android.R.id.home -> {
+                        view.findNavController().popBackStack()
+                    }
                     else -> {
                         true
                     }

@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment3.databinding.FragmentDraftBinding
 import com.google.gson.Gson
@@ -72,6 +73,7 @@ class DraftFragment : Fragment() {
                         }
                         true
                     }
+                    android.R.id.home -> view.findNavController().popBackStack()
                     else -> {
                         true
                     }

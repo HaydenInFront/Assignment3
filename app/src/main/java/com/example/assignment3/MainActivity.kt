@@ -8,7 +8,6 @@ import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.assignment3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -16,25 +15,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //view binding
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-
-        //toolbar title
+        //sets title for toolbar
         this.title = "BetterMail"
 
-        //sets content view to activity
+        //sets content view
         setContentView(R.layout.activity_main)
 
-        //grabs toolbar
-        val toolbar = binding.toolbar
-        //sets actionbar to toolbar
+        //grabs toolbar and sets up as action bar
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        //nav host fragment and nav controller
+        //nav host stuff
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        //setups navigation for toolbar
+        //allows toolbar to use nav controller
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
@@ -64,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSubject)
                 startActivity(Intent.createChooser(sharingIntent, "Share using"))
             }
-            //navigates to help fragment
+            //displays the help fragment which explains the app
             R.id.helpFragment -> {
                 NavigationUI.onNavDestinationSelected(item, navController)
             }

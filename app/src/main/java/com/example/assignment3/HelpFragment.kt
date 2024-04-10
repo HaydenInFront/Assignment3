@@ -52,6 +52,8 @@ class HelpFragment : Fragment() {
                         }
                         true
                     }
+                    //returns to previous screen in stack
+                    android.R.id.home -> view.findNavController().popBackStack()
                     else -> {
                         true
                     }
