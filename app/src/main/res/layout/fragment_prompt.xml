@@ -14,7 +14,6 @@
         android:id="@+id/promptLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#414141"
         android:scrollbars="vertical"
         tools:context=".PromptFragment">
 
@@ -211,8 +210,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/addressInputBackground"
             android:layout_alignEnd="@id/addressInputBackground"
-            android:background="@drawable/background_text_border"
-            android:text="Button" />
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#A7A7A7"
+            android:text="Generate" />
 
     </RelativeLayout>
 

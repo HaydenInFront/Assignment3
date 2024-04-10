@@ -21,4 +21,6 @@
     <string name="draft1Title">Draft 1</string>
     <string name="draft2Title">Draft 2</string>
     <string name="draft3Title">Draft 3</string>
+    <string name="helpTitle">Better Mail</string>
+    <string name="helpInfo">Better Mail is an app focused around productivity and email guidance. We use Chat GPT to generate email drafts for the users. We provide users with a custom structure to create an optimal prompt for our AI. This structure allows for the user to receive multiple drafts to select from.</string>
 </resources>

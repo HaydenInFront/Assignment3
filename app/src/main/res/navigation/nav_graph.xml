@@ -30,4 +30,9 @@
         <argument android:name="promptInput"
             app:argType="string[]" />
     </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.assignment3.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
 </navigation>

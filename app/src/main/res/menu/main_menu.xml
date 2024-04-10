@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/shareButton"
+        android:icon="@drawable/baseline_share_24"
+        android:title="Share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="androidx.core.view.ActionProvider"/>
+    <item android:id="@+id/helpFragment"
+        android:icon="@drawable/baseline_help_24"
+        android:title="Help"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="androidx.core.view.ActionProvider"/>
+</menu>

@@ -13,11 +13,15 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
-import com.example.assignment3.databinding.FragmentMenuBinding
 
-class MenuFragment : Fragment() {
-
-    private lateinit var binding: FragmentMenuBinding
+class HelpFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_help, container, false)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,7 +50,7 @@ class MenuFragment : Fragment() {
                             view.setBackgroundColor(Color.parseColor("#EBEBEB"))
                             !isColorWhite
                         }
-                            true
+                        true
                     }
                     else -> {
                         true
@@ -55,19 +59,5 @@ class MenuFragment : Fragment() {
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
-        //menu button
-        val menuButton = binding.menuStart
-
-        //menu button navigates to next fragment
-        menuButton.setOnClickListener {
-            view.findNavController()
-                .navigate(R.id.action_menuFragment_to_promptFragment)
-        }
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        binding = FragmentMenuBinding.inflate(inflater, container, false)
-        return binding.root
     }
 }

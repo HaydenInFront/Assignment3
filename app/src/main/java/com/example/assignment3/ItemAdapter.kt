@@ -11,18 +11,18 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ItemAdapter(private val context: Context, private val dataset: List<PromptOutput>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     class ItemViewHolder (private val view: View, private val context: Context): RecyclerView.ViewHolder(view){
-        //private val textView: TextView = view.findViewById(R.id.promptTypeName)
+        //grabs title and text of draft provided
         private val draftTitle: TextView = view.findViewById(R.id.draftTitle)
         private val draftText: TextView = view.findViewById(R.id.draftText)
 
+        //grabs copy button
         private val copyButton: TextView = view.findViewById(R.id.copyButton)
-        //private val imageView: ImageView = view.findViewById(R.id.promptInputBackground)
-
-        private var currPromptOutput: PromptOutput? = null;
 
         fun bind(promptOutput: PromptOutput) {
+            //sets the correct title and text from prompt output
             draftTitle.text = context.resources.getString(promptOutput.titleResourceId)
             draftText.text = promptOutput.output
+            //sets the copy button to copy draft text to clipboard
             copyButton.setOnClickListener {
                 val textToCopy = draftText.text.toString()
                 val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -30,8 +30,6 @@ class ItemAdapter(private val context: Context, private val dataset: List<Prompt
                 val clipData = ClipData("draft", arrayOf("text/plain"), clip)
                 clipboardManager.setPrimaryClip(clipData)
             }
-            //textView.text = context.resources.getString(promptInput.stringResourceId)
-            //imageView.setImageResource(promptInput.image)
         }
     }
 
